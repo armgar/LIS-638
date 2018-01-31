@@ -68,6 +68,16 @@
 			echo "<p>Big ticket</p>";
 		}
 		
+		/*
+		if ($birthday==$currentdate) 
+		{
+			echo "<p>It's your birthday!</p>";
+			echo "<p>Your speed before was $speedmph, but it's your birthday, so I changed it to: </p>";
+			$speedmph = $speedmph-5;
+			echo $speedmph;
+		}
+		*/
+		
 		$counter = 1;
 		#while
 		while (($speedmph > 80) && ($counter < 11)) 
@@ -79,6 +89,7 @@
 		#do
 		do 
 		{
+			echo "BAD BAD BAD<br>";
 			++$counter;
 		} while (($speedmph > 80) && ($counter < 11));
 		
@@ -88,15 +99,7 @@
 			echo "Right now \$counter is $counter<br>";
 		}
 	
-		/*
-		if ($birthday==$currentdate) 
-		{
-			echo "<p>It's your birthday!</p>";
-			echo "<p>Your speed before was $speedmph, but it's your birthday, so I changed it to: </p>";
-			$speedmph = $speedmph-5;
-			echo $speedmph;
-		}
-		*/
+		
 		?>
 	</body>
 </html>
