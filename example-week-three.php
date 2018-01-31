@@ -46,6 +46,34 @@
 				break;
 		}
 		
+		# In class exercise
+		
+		
+		$speedmph = 85;
+		$currentdate = date("md");
+		$birthday = "0131";
+		
+		if ($speedmph <= 60)
+		{
+			echo "<p>No ticket</p>";
+		}
+		elseif (($speedmph >= 61) && ($speedmph <= 80))
+		{
+			echo "<p>Small ticket</p>";
+		}
+		elseif ($speedmph >= 81)
+		{
+			echo "<p>Big ticket</p>";
+		}
+	
+		if ($birthday==$currentdate) 
+		{
+			echo "<p>It's your birthday!</p>";
+			echo "<p>Your speed before was $speedmph, but it's your birthday, so I changed it to: </p>";
+			$speedmph = $speedmph-5;
+			echo $speedmph;
+		}
+	
 		?>
 	</body>
 </html>
