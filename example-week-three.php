@@ -53,6 +53,8 @@
 		$currentdate = date("md");
 		$birthday = "0131";
 		
+		
+		
 		if ($speedmph <= 60)
 		{
 			echo "<p>No ticket</p>";
@@ -65,7 +67,28 @@
 		{
 			echo "<p>Big ticket</p>";
 		}
+		
+		$counter = 1;
+		#while
+		while (($speedmph > 80) && ($counter < 11)) 
+		{
+			echo "BAD BAD BAD<br>";
+			++$counter;
+		}
+		
+		#do
+		do 
+		{
+			++$counter;
+		} while (($speedmph > 80) && ($counter < 11));
+		
+		#for ... primarly used when you know the count or have a predetermined loop
+		for ($counter = 1; $counter < 6; ++$counter)
+		{
+			echo "Right now \$counter is $counter<br>";
+		}
 	
+		/*
 		if ($birthday==$currentdate) 
 		{
 			echo "<p>It's your birthday!</p>";
@@ -73,7 +96,7 @@
 			$speedmph = $speedmph-5;
 			echo $speedmph;
 		}
-	
+		*/
 		?>
 	</body>
 </html>
