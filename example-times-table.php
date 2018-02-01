@@ -32,6 +32,20 @@
 			}	
 		echo "</table></p>";
 
+
+		$input_number = 6;
+		echo "<p><table border=1>";
+			for ($counter = 1; $counter <= $input_number; ++$counter)
+			{
+				echo "<tr>";
+					for ($inner_counter = 1; $inner_counter <= $input_number; ++$inner_counter)
+					{
+						echo "<td>".$counter * $inner_counter."</td>";
+					}
+				echo "</tr>";
+			}	
+		echo "</table></p>";
+
 		?>
 	</body>
 </html>
