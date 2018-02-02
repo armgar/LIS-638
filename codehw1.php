@@ -77,7 +77,22 @@
 		echo "<hr>"; # Break between Challenges
 
 		echo "<h2>Challenge 2: 99 Bottles of Beer</h2>";
-		echo "<p>99 bottles of beer on the wall, 99 bottles of beer.<br>Take one down, pass it around, 98 bottles of beer on the wall.</p>";
+
+		for ($count = 99; $count  > 1; --$count)
+		{
+			echo "<p>$count bottles of beer on the wall, $count bottles of beer.<br>
+			Take one down, pass it around, $count bottles of beer on the wall.</p>";
+		}
+
+		echo "<p>99 bottles of beer on the wall, 99 bottles of beer.<br>
+		Take one down, pass it around, 98 bottles of beer on the wall.</p>";
+
+		
+		if ($count = 0)
+		{
+			echo "<p>No more bottles of beer on the wall, no more bottles of beer.<br>
+			We've taken them down and passed them around; now we're drunk and passed out!</p>";
+		}
 
 		?>
 	</body>
