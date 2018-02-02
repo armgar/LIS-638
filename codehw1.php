@@ -78,21 +78,60 @@
 
 		echo "<h2>Challenge 2: 99 Bottles of Beer</h2>";
 
-		for ($count = 99; $count  > 1; --$count)
+		$count_input = 99;
+		$count_next = $count_input - 1;
+
+		/*
+		for ($count = $count_input ; $count > 0 ; --$count)
 		{
 			echo "<p>$count bottles of beer on the wall, $count bottles of beer.<br>
 			Take one down, pass it around, $count bottles of beer on the wall.</p>";
 		}
+		*/
 
-		echo "<p>99 bottles of beer on the wall, 99 bottles of beer.<br>
-		Take one down, pass it around, 98 bottles of beer on the wall.</p>";
+		do
+		{
+			echo "<p>$count_input bottles of beer on the wall, $count_input bottles of beer.<br>
+			Take one down, pass it around, $count_next bottles of beer on the wall.</p>";
+			--$count_input;
+			--$count_next;
+		} while ($count_input > 2);
 
+		for ($count_input = 2 ; $count_input > 1 ; --$count_input)
+		{
+			echo "<p>$count_input bottles of beer on the wall, $count_input bottles of beer.<br>
+			Take one down, pass it around, $count_next bottle of beer on the wall.</p>";
+			--$count_input;
+			--$count_next;
+		}
+
+		for ($count_input = 1 ; $count_input > 0 ; --$count_input)
+		{
+			echo "<p>$count_input bottle of beer on the wall, $count_input bottle of beer.<br>
+			Take one down, pass it around, $count_next bottles of beer on the wall.</p>";
+			--$count_input;
+			--$count_next;
+		}
+
+		for ($count_input = 0 ; $count_input > -1 ; --$count_input)
+		{
+			echo "<p>No more bottles of beer on the wall, no more bottles of beer.<br>
+			We've taken them down and passed them around; now we're drunk and passed out!</p>";
+		}
+/*
+		do
+		{
+			echo "<p>$count_input bottle of beer on the wall, $count_input bottle of beer.<br>
+			Take one down, pass it around, $count_next bottles of beer on the wall.</p>";
+		} while ($count_input = 0); */
 		
+		/*
 		if ($count = 0)
 		{
 			echo "<p>No more bottles of beer on the wall, no more bottles of beer.<br>
 			We've taken them down and passed them around; now we're drunk and passed out!</p>";
 		}
+		*/
 
 		?>
 	</body>
