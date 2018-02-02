@@ -74,6 +74,11 @@
 		echo "<p>You are due $total_change cents back in change total.</p>";
 		echo "<p>You are due back $dollars dollar(s), $quarters_left quarter(s), $dimes_left dime(s), $nickels_left nickel(s), and $pennies_left cent(s).</p>";
 
+		echo "<hr>"; # Break between Challenges
+
+		echo "<h2>Challenge 2: 99 Bottles of Beer</h2>";
+		echo "<p>99 bottles of beer on the wall, 99 bottles of beer.<br>Take one down, pass it around, 98 bottles of beer on the wall.</p>";
+
 		?>
 	</body>
 </html>
