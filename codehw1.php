@@ -15,7 +15,7 @@
 		$dollars = ($total_change - $total_cents) / 100;
 
 		/* 
-		Why doesn't this work!?
+		This crazy equation did not work
 		$quarters = (($total_cents / 25 * 100) - ($total_cents % 25)) / 100;
 		*/
 
@@ -74,20 +74,14 @@
 		echo "<p>You are due $total_change cents back in change total.</p>";
 		echo "<p>You are due back $dollars dollar(s), $quarters_left quarter(s), $dimes_left dime(s), $nickels_left nickel(s), and $pennies_left cent(s).</p>";
 
-		echo "<hr>"; # Break between Challenges
+		echo "<hr>";
+
+		# Challenge 2 starts here ****************
 
 		echo "<h2>Challenge 2: 99 Bottles of Beer</h2>";
 
-		$count_input = 99;
+		$count_input = 1;
 		$count_next = $count_input - 1;
-
-		/*
-		for ($count = $count_input ; $count > 0 ; --$count)
-		{
-			echo "<p>$count bottles of beer on the wall, $count bottles of beer.<br>
-			Take one down, pass it around, $count bottles of beer on the wall.</p>";
-		}
-		*/
 
 		do
 		{
@@ -95,9 +89,9 @@
 			Take one down, pass it around, $count_next bottles of beer on the wall.</p>";
 			--$count_input;
 			--$count_next;
-		} while ($count_input > 2);
+		} while (($count_input < 100) && ($count_input >= 3));
 
-		for ($count_input = 2 ; $count_input > 1 ; --$count_input)
+		if (($count_input <= 2) && ($count_input > 1))
 		{
 			echo "<p>$count_input bottles of beer on the wall, $count_input bottles of beer.<br>
 			Take one down, pass it around, $count_next bottle of beer on the wall.</p>";
@@ -107,23 +101,60 @@
 
 		for ($count_input = 1 ; $count_input > 0 ; --$count_input)
 		{
+			echo "<p>1 bottle of beer on the wall, 1 bottle of beer.<br>
+			Take one down, pass it around, 0 bottles of beer on the wall.</p>";
+		}
+
+		/*
+		do 
+		{
+			echo "<p>$count_input bottle of beer on the wall, $count_input bottle of beer.<br>
+			Take one down, pass it around, $count_next bottles of beer on the wall.</p>";
+			--$count_input;
+			--$count_next;
+		} while (($count_input <= 1) && ($count_input > 0));
+
+		
+		for ($count_input <= 2 ; $count_input > 1 ; --$count_input)
+		{
+			echo "<p>$count_input bottles of beer on the wall, $count_input bottles of beer.<br>
+			Take one down, pass it around, $count_next bottle of beer on the wall.</p>";
+			--$count_input;
+			--$count_next;
+		}
+
+		for ($count_input <= 1 ; $count_input > 0 ; --$count_input)
+		{
 			echo "<p>$count_input bottle of beer on the wall, $count_input bottle of beer.<br>
 			Take one down, pass it around, $count_next bottles of beer on the wall.</p>";
 			--$count_input;
 			--$count_next;
 		}
+		*/
 
 		for ($count_input = 0 ; $count_input > -1 ; --$count_input)
 		{
 			echo "<p>No more bottles of beer on the wall, no more bottles of beer.<br>
 			We've taken them down and passed them around; now we're drunk and passed out!</p>";
 		}
-/*
+		
+		# These loops did not work!
+
+		/*
+		for ($count = $count_input ; $count > 0 ; --$count)
+		{
+			echo "<p>$count bottles of beer on the wall, $count bottles of beer.<br>
+			Take one down, pass it around, $count bottles of beer on the wall.</p>";
+		}
+		*/
+
+		/*
 		do
 		{
 			echo "<p>$count_input bottle of beer on the wall, $count_input bottle of beer.<br>
 			Take one down, pass it around, $count_next bottles of beer on the wall.</p>";
-		} while ($count_input = 0); */
+		} while ($count_input = 0);
+		*/
 		
 		/*
 		if ($count = 0)
