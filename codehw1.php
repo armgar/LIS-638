@@ -1,4 +1,4 @@
-<DOCTYPE! html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -80,7 +80,7 @@
 
 		echo "<h2>Challenge 2: 99 Bottles of Beer</h2>";
 
-		$count = 2;
+		$count = 3;
 		$count_next = $count - 1;
 
 		for ($count_input = $count ; $count_input > 2 ; --$count_input)
