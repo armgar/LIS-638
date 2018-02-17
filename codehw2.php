@@ -47,8 +47,9 @@
 		echo "<h2>1: <strong>Challenge: ISBN Validation</strong></h2>";
 		
 		# Set string to a variable
-		$isbn = "0747532699"; # Valid
-		$isbn = "1123456789"; # Not valid
+		$isbn = "156881111X"; # Valid
+		#$isbn = "0747532699"; # Valid
+		#$isbn = "1123456789"; # Not valid
 		echo "<p>This is the ISBN number we have to validate " . $isbn . ".</p>";
 		
 		# Determine string length; valid ISBN number is 10 digits long
@@ -76,39 +77,37 @@
 			echo $item;
 		};
 
-		$isbnFactor = (($isbnArray[0] * 10) + ($isbnArray[1] * 9) + ($isbnArray[2] * 8) + ($isbnArray[3] * 7) + ($isbnArray[4] * 6) + ($isbnArray[5] * 5) + ($isbnArray[6] * 4) + ($isbnArray[7] * 3) + ($isbnArray[8] * 2) + ($isbnArray[9] * 1)) / 11;
-		$isbnCheck = $isbnFactor - ((int) $isbnFactor);
-
-		for ($isbnCheck ; $isbnCheck >= 0 ; --$isbnCheck )
-		{
-			if ($isbnCheck == 0) {
-				echo "<p>" . $isbn . " is a valid number!</p>";
-
-			} else {
-				echo "<p>" . $isbn . " is NOT a valid number!</p>";
-			}
+		# Convert final ISBN value to 10 if it is an 'X'
+		if ($isbnArray[9] == "X") {
+			$isbnArray[9] = 10;
 		}
-/*
-		echo "<p>Here is the text in Pig Latin: <em>" .  
-			ucfirst(substr($newArray[0], 1, 6)) . lcfirst(substr($newArray[0], 0, 1))  . "ay" . 
-			" " . substr($newArray[1], 1, 6) . substr($newArray[1], 0, 1)  . "ay" . 
-			" " . substr($newArray[2], 1, 6) . substr($newArray[2], 0, 1)  . "ay" . 
-			" " . substr($newArray[3], 1, 6) . substr($newArray[3], 0, 1)  . "ay" . 
-			" " . substr($newArray[4], 1, 6) . substr($newArray[4], 0, 1)  . "ay" . 
-			" " . substr($newArray[5], 1, 6) . substr($newArray[5], 0, 1)  . "ay" . "</em>.</p>";
 
-		$pigLatin = "Ellohay ndaay elcomeway otay hetay oursecay";
-		$newEnglishArray = explode(" ", $pigLatin);
+		# Divide by 11
+		$isbnFactor = (($isbnArray[0] * 10) + ($isbnArray[1] * 9) + ($isbnArray[2] * 8) + ($isbnArray[3] * 7) + ($isbnArray[4] * 6) + ($isbnArray[5] * 5) + ($isbnArray[6] * 4) + ($isbnArray[7] * 3) + ($isbnArray[8] * 2) + ($isbnArray[9] * 1)) / 11;
+		
+		if ($isbnFactor == ((int) $isbnFactor)) {
+			echo "<p>" . $isbn . " is a valid number!</p>";
 
-		echo "<p>Converting the Pig Latin text <em>" . $pigLatin . "</em> to English...</p>";
-		echo "<p>Here is the text in English: <em>" .  
-			ucfirst(substr($newEnglishArray[0], 4, 1)) . lcfirst(substr($newEnglishArray[0], 0, 4))  .  
-			" " . substr($newEnglishArray[1], 3, 1) . substr($newEnglishArray[1], 0, 2)  . 
-			" " . substr($newEnglishArray[2], 6, 1) . substr($newEnglishArray[2], 0, 6)  . 
-			" " . substr($newEnglishArray[3], 1, 1) . substr($newEnglishArray[3], 0, 1)  . 
-			" " . substr($newEnglishArray[4], 2, 1) . substr($newEnglishArray[4], 0, 2)  . 
-			" " . substr($newEnglishArray[5], 5, 1) . substr($newEnglishArray[5], 0, 5)  . "</em>.</p>";
-*/
+		} else {
+			echo "<p>" . $isbn . " is NOT a valid number!</p>";
+		}
+
+		/* 
+		# Trying to figure out a counter or loop for the equation 
+		for ($counter = 10; $counter > 0; --$counter || $digit = 0; $digit < 10; ++$digit)
+		{
+			$isbnFactor = (($isbnArray[$digit] * $counter) / 11);
+		}
+
+		echo "<p>" . $isbnFactor . "</p>";
+		
+		if ($isbnFactor == ((int) $isbnFactor)) {
+			echo "<p>" . $isbn . " is a valid number!</p>";
+
+		} else {
+			echo "<p>" . $isbn . " is NOT a valid number!</p>";
+		}
+		*/
 		?>
 	</body>
 </html>
