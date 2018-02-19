@@ -54,7 +54,7 @@
 		
 		# Determine string length; valid ISBN number is 10 digits long
 		$isbnLength = strlen($isbn);
-		echo "<p>This is the length of the ISBN number " . $isbnLength . ".</p>";
+		echo "<p>This is the length of the ISBN number: " . $isbnLength . ".</p>";
 		
 		# Convert ISBN string input into an array
 		$isbnArray = array(
@@ -108,6 +108,12 @@
 			echo "<p>" . $isbn . " is NOT a valid number!</p>";
 		}
 		*/
+
+		# Challenge 2
+		echo "<hr><h2>2: <strong>Challenge: Coin Toss</strong></h2>";
+
+		echo '<p><img alt="heads side of a penny" height="50" width="50" src="images/penny-heads.png"></p>';
+		echo '<p><img alt="tails side of a penny" height="50" width="50" src="images/penny-tails.png"></p>';
 		?>
 	</body>
 </html>
