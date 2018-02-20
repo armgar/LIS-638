@@ -87,7 +87,6 @@
 		
 		if ($isbnFactor == ((int) $isbnFactor)) {
 			echo "<p>" . $isbn . " is a valid number!</p>";
-
 		} else {
 			echo "<p>" . $isbn . " is NOT a valid number!</p>";
 		}
@@ -111,9 +110,173 @@
 
 		# Challenge 2
 		echo "<hr><h2>2: <strong>Challenge: Coin Toss</strong></h2>";
+		
+		$pennyHeadsSide = '<img alt="heads side of a penny" height="100" width="100" src="https://upload.wikimedia.org/wikipedia/commons/8/84/2005-Penny-Uncirculated-Obverse.png">';
+		$pennyTailsSide = '<img alt="tails side of a penny" height="100" width="100" src="https://upload.wikimedia.org/wikipedia/commons/e/e5/2005_Penny_Rev_Unc_D.png">';
+		
+		echo "<p>Flipping a coin 1 time...</p>";
+		$flipOneCoin = mt_rand(1,2);
 
-		echo '<p><img alt="heads side of a penny" height="50" width="50" src="images/penny-heads.png"></p>';
-		echo '<p><img alt="tails side of a penny" height="50" width="50" src="images/penny-tails.png"></p>';
+		if ($flipOneCoin == 1) {
+			echo $pennyHeadsSide;
+		} else {
+			echo $pennyTailsSide;
+		}
+
+		echo "<p>Flipping a coin 3 times...</p>";
+		$flipThreeCoins = mt_rand(1,3);
+		
+		/* Trying to create a loop, but stuck
+
+		$flips = 2;
+		numberOfFlips($flips);
+		numberOfFlips(1);
+
+		function numberOfFlips($flips) {
+			while ($flips) {
+				if ($flipThreeCoins == mt_rand(1,3)) {
+					echo $pennyHeadsSide;
+				} else {
+					echo $pennyTailsSide;	
+				}
+				$flips--;
+			}
+		}
+		*/
+
+		if ($flipThreeCoins == mt_rand(1,3)) {
+			echo $pennyHeadsSide;
+		} else {
+			echo $pennyTailsSide;
+		}
+		if ($flipThreeCoins == mt_rand(1,3)) {
+			echo $pennyHeadsSide;
+		} else {
+			echo $pennyTailsSide;
+		}
+		if ($flipThreeCoins == mt_rand(1,3)) {
+			echo $pennyHeadsSide;
+		} else {
+			echo $pennyTailsSide;
+		}
+
+		echo "<p>Flipping a coin 5 times...</p>";
+		$flipFiveCoins = mt_rand(1,5);
+
+		if ($flipFiveCoins == mt_rand(1,5)) {
+			echo $pennyHeadsSide;
+		} else {
+			echo $pennyTailsSide;
+		}
+		if ($flipFiveCoins == mt_rand(1,5)) {
+			echo $pennyHeadsSide;
+		} else {
+			echo $pennyTailsSide;
+		}
+		if ($flipFiveCoins == mt_rand(1,5)) {
+			echo $pennyHeadsSide;
+		} else {
+			echo $pennyTailsSide;
+		}
+		if ($flipFiveCoins == mt_rand(1,5)) {
+			echo $pennyHeadsSide;
+		} else {
+			echo $pennyTailsSide;
+		}
+		if ($flipFiveCoins == mt_rand(1,5)) {
+			echo $pennyHeadsSide;
+		} else {
+			echo $pennyTailsSide;
+		}
+
+		echo "<p>Flipping a coin 7 times...</p>";
+		$flipSevenCoins = mt_rand(1,7);
+
+		if ($flipSevenCoins == mt_rand(1,7)) {
+			echo $pennyHeadsSide;
+		} else {
+			echo $pennyTailsSide;
+		}
+		if ($flipSevenCoins == mt_rand(1,7)) {
+			echo $pennyHeadsSide;
+		} else {
+			echo $pennyTailsSide;
+		}
+		if ($flipSevenCoins == mt_rand(1,7)) {
+			echo $pennyHeadsSide;
+		} else {
+			echo $pennyTailsSide;
+		}
+		if ($flipSevenCoins == mt_rand(1,7)) {
+			echo $pennyHeadsSide;
+		} else {
+			echo $pennyTailsSide;
+		}
+		if ($flipSevenCoins == mt_rand(1,7)) {
+			echo $pennyHeadsSide;
+		} else {
+			echo $pennyTailsSide;
+		}
+		if ($flipSevenCoins == mt_rand(1,7)) {
+			echo $pennyHeadsSide;
+		} else {
+			echo $pennyTailsSide;
+		}
+		if ($flipSevenCoins == mt_rand(1,7)) {
+			echo $pennyHeadsSide;
+		} else {
+			echo $pennyTailsSide;
+		}
+
+		echo "<p>Flipping a coin 9 times...</p>";
+		$flipNineCoins = mt_rand(1,9);
+
+		if ($flipNineCoins == mt_rand(1,9)) {
+			echo $pennyHeadsSide;
+		} else {
+			echo $pennyTailsSide;
+		}
+		if ($flipNineCoins == mt_rand(1,9)) {
+			echo $pennyHeadsSide;
+		} else {
+			echo $pennyTailsSide;
+		}
+		if ($flipNineCoins == mt_rand(1,9)) {
+			echo $pennyHeadsSide;
+		} else {
+			echo $pennyTailsSide;
+		}
+		if ($flipNineCoins == mt_rand(1,9)) {
+			echo $pennyHeadsSide;
+		} else {
+			echo $pennyTailsSide;
+		}
+		if ($flipNineCoins == mt_rand(1,9)) {
+			echo $pennyHeadsSide;
+		} else {
+			echo $pennyTailsSide;
+		}
+		if ($flipNineCoins == mt_rand(1,9)) {
+			echo $pennyHeadsSide;
+		} else {
+			echo $pennyTailsSide;
+		}
+		if ($flipNineCoins == mt_rand(1,9)) {
+			echo $pennyHeadsSide;
+		} else {
+			echo $pennyTailsSide;
+		}
+		if ($flipNineCoins == mt_rand(1,9)) {
+			echo $pennyHeadsSide;
+		} else {
+			echo $pennyTailsSide;
+		}
+		if ($flipNineCoins == mt_rand(1,9)) {
+			echo $pennyHeadsSide;
+		} else {
+			echo $pennyTailsSide;
+		}
+
 		?>
 	</body>
 </html>
