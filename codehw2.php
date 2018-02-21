@@ -60,9 +60,23 @@
 		} else {
 			echo "<p>" . $isbn . " is NOT a valid number!</p>";
 		}
-
-		/* 
-		# Trying to figure out a counter or loop for the equation 
+		
+		echo "<p>" . $isbnFactor . "</p>";
+		
+		/* in-class notes
+		# Trying to figure out a counter or loop for the equation
+		for ($digit = 1; $digit < 10; ++$digit)
+		{
+			if ($isbnArray[9] == "X") {
+				$isbnArray[9] = 10;
+			}
+			$isbnFactor = 0;
+			$counter = 10;
+			$isbnFactor = $isbnFactor + (($isbnArray[$digit] * $counter) / 11);
+			--$counter;
+		}
+		
+		# Trying to figure out a counter or loop for the equation
 		for ($counter = 10; $counter > 0; --$counter || $digit = 0; $digit < 10; ++$digit)
 		{
 			$isbnFactor = (($isbnArray[$digit] * $counter) / 11);
