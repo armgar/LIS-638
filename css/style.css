@@ -27,3 +27,20 @@ hr {
 	border: 2px solid;
 	opacity: 0.5;
 }
+table.bookList {
+	border: 1px solid #2d3436;	
+}
+table.bookList th {
+	font-size: 15px;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 5px;
+	border: 1px solid #2d3436;
+}
+table.bookList td {
+	padding: 5px;
+	border: 1px solid #2d3436;
+}
+p.totalPrice {
+	font-size: 1.5em;
+}
