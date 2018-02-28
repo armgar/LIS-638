@@ -55,7 +55,23 @@
 					"type" => "Paperback",
 					"price" => "28.96")
 			);
-
+			
+			/*
+			# In-Class discussion
+			$sum = 0;
+			echo "<table>";
+			foreach ($bookData AS $item => $value) {
+				echo "<tr>";
+				echo "<td>" . $value["title"]. "</td>";
+				$sum = $sum + $value["price"];
+				foreach ($value AS $key => $keyOne) {
+					echo "<td>" . $keyOne . "</td>";
+				}
+				echo "</tr>";
+			}
+			echo "</table>";
+			*/
+			
 			$totalPrice = ($bookData["book1"]["price"]) + ($bookData["book2"]["price"]) + ($bookData["book3"]["price"]) + ($bookData["book4"]["price"]) + ($bookData["book5"]["price"]) + ($bookData["book6"]["price"]);
 
 			echo "<h1>Code Homework 3</h1>
