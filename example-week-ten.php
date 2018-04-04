@@ -1,22 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Code Homework for LIS-638 Web Development">
-	<title>Week 10 Exercises&mdash;Armando Garcia</title>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
-</head>
-<body>
+<?php
+	include "page_start.php";
+?>
+
 <h1>week ten</h1>
 <?php
 #add some database driven functionality
-$host = 'localhost';
-$db = 'facilities';
-$username = 'root';
-$passwd = 'si606'; #own computer would look like $passwd = '';
+include "login_info.php";
 
 # Make the connection to mysql using the credentials above
 $connection = new mysqli($host, $username, $passwd, $db);
@@ -34,16 +23,28 @@ if(!$query_result) {
 	echo "<p>We have an error!</p>";
 	die($connection->error);
 }
-
+#Populate query
 $rows_returned = $query_result->num_rows;
 echo "<p>We got back $rows_returned row(s).</p>";
-
-
 
 while ($row = $query_result->fetch_assoc() ) {
 	echo "<p>Room number " . $row["room_num"] . " has ";
 	echo $row["amount"] . " of " . $row["type"] . "(s)</p>";
 }
+#New Query
+$q = "CREATE TABLE staff (staff_id INT AUTO_INCREMENT PRIMARY KEY,
+staff_name VARCHAR(200));";
+
+#Run new query
+$query_result2 = $connection->query($q);
+if(!$query_result2) {
+	echo "<p>We have an error!</p>";
+	die($connection->error);
+}
+
+#Populate it on the page
+
+
 
 $connection->close();
 ?>
