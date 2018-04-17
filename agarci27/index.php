@@ -1,7 +1,7 @@
 <?php
-	include "page_start.php";
+	include "html_head.php";
 	include "functions.php";
-	echo "<h1>week 12&mdash;What's new today?</h1>";
+	echo "<h1>Databse, Final Project</h1>";
 	echo "<h2>Login!</h2>";
 ?>
 
