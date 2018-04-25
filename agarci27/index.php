@@ -14,8 +14,15 @@ Password: <input type="password" name="upass">
 <?php
 $hn = 'localhost';
 $db = 'agarci27';
-$un = 'armgar';
-$pw = 'armgar';
+$un = 'root';
+$pw = 'si606';
+
+echo '<ul>
+		<li><a href="index.php">Home</a></li>
+		<li><a href="index.php">Tasks</a></li>
+		<li><a href="index.php">Homework</a></li>
+		<li><a href="index.php">Appointments</a></li>
+	</ul>';
 
 # Make the connection to mysql using the credentials above
 $conn = new mysqli($hn, $un, $pw, $db);
