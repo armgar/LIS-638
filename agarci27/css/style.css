@@ -29,20 +29,29 @@ hr {
 	border: 2px solid;
 	opacity: 0.5;
 }
-table.listall {
-	font-family: 'Open Sans', sans-serif;
-	border: 1px solid #2d3436;	
+table {
+	border-collapse: collapse;
+	margin: 10px;
+	width: 100%;
 }
-table.listall th {
+table, tr, th, td {
+	text-align: center;
+	height: 50px;
 	font-size: 15px;
 	color: #0984e3;
 	text-transform: uppercase;
 	padding: 5px;
-	border: 1px solid #2d3436;
+	border: 2px solid #000000;
 }
+table.listall, table.listall th, 
 table.listall td {
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	color: #0984e3;
+	text-transform: uppercase;
 	padding: 5px;
-	border: 1px solid #2d3436;
+	border: 2px solid #000000;
 }
 p {
 	font-family: 'Open Sans', sans-serif;

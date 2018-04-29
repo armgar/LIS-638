@@ -1,0 +1,7 @@
+table { border-collapse: collapse; margin: 10px; }
+table, tr, th, td { border: 1px solid #000; }
+header {border: 1px solid #000; text-align:center;width:100%;}
+footer {border-top: 1px solid #000; text-align:center;width:100%;margin-top: 10px;}
+#body {width: 30%; margin-left: auto; margin-right:auto;}
+.error {color: red;}
+.message {color: blue;}
