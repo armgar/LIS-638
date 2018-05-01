@@ -1,3 +1,3 @@
-<footer><h1>Database, Final Project</h1></footer>
-</body>
+		<footer><h1 class="footer">Database, Final Project</h1></footer>
+	</body>
 </html>
