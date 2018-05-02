@@ -12,12 +12,10 @@
 					<li><a href='tasks.php'>Tasks</a></li>
 					<li><a class='active' href='homework.php'>Homework</a></li>
 					<li><a href='appointments.php'>Appointments</a></li>
-					<li style='float:right'><a href='addatodo.php'>Add a to-do</a></li>
+					<li style='float:right'><a href='addatodo.php'>Add A To-Do</a></li>
 				</ul>
 			</nav>";
-		echo "<br><h3>Time to get to work, <strong>".$_SESSION['fname']." ".$_SESSION['lname'];
-		echo "</strong> | You are logged in.";
-		echo " | <small><a href=\"sign_out.php\">Logout</a></small></h3><br>";
+		include_once "includes/content_top.php";
 	}
 	
 	require_once 'includes/login.php';
@@ -36,8 +34,8 @@
 
 	# Determine the number of rows returned so we can loop through them
 	$rows = $result->num_rows;
-	echo "<table style='table_header'>
-			<tr style='table_header'><td style='table_header'><h3>Homework Assignments</h3></td></tr>
+	echo "<table>
+			<tr><td class='table_header'>Homework Assignments</td></tr>
 		</table>
 		<table>
 			<tr>
@@ -75,8 +73,8 @@
 
 	# Determine the number of rows returned so we can loop through them
 	$rows = $result->num_rows;
-	echo "<table style='table_header'>
-			<tr style='table_header'><td style='table_header'><h3>Current Courses</h3></td></tr>
+	echo "<table>
+			<tr><td class='table_header'>Current Courses</td></tr>
 		</table>
 		<table>
 			<tr>
@@ -101,6 +99,7 @@
 ?>
 	
 <?php
+	include_once "includes/content_bottom.php";
 	include_once "includes/footer.php";
 ?>
 

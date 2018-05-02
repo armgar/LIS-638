@@ -7,7 +7,7 @@
 
 	if (isset($_POST['submit'])) { //check if the form has been submitted
 		if ( empty($_POST['username']) || empty($_POST['password']) ) {
-			$message = '<p class="error">Please fill out all of the form fields!</p>';
+			$message = '<center><p class="error">Please fill out all of the form fields!</p></center>';
 		} else {
 			$conn = new mysqli($hn, $un, $pw, $db);
 			if ($conn->connect_error) die($conn->connect_error);
@@ -28,25 +28,34 @@
 				header('Location: ' . $goto);
 				exit;			
 			} else {
-				$message = '<p class="error">Invalid username/password combination! Try again.</p>';
+				$message = '<center><p class="error">Invalid username/password combination! Try again.</p></center>';
 			}
 		}
 	}
 ?>
 
-<?php 
-	if (isset($message)) echo $message;
-?>
-
-<p>Log-in with your username and password to access your to-dos.</p>
-
-<fieldset style="width:35%">
-	<legend>Log-in</legend>
-	<form id="login" method="POST" action="">
-		Username:<br><input type="text" name="username" size="55"><br>
-		Password:<br><input type="password" name="password" size="55"><br>
-		<input type="submit" name="submit" value="Log-In">
-	</form>
-</fieldset>
-
+<?php if (isset($message)) echo $message; ?>
+<div id="wrapper">
+	<p class='white'>Log-in with your username and password to access your to-dos.</p>
+	<center>
+		<form id="login" method="POST" action="">
+			<fieldset>
+				<legend>Log-in</legend>
+				<ol>
+					<li>
+						<label for="username">Username:</label>
+						<input id="username" name="username" type="username" placeholder="Username">
+					</li><br>
+					<li>
+						<label for="password">Password:</label>
+						<input id="password" name="password" type="password" placeholder="Password">
+					</li>
+				</ol>
+			</fieldset>
+			<fieldset>
+				<input type="submit" name="submit" value="Log-In" class="login_button">
+			</fieldset>
+		</form>
+	</center>
+<div>
 <?php include_once 'includes/footer.php'; ?>

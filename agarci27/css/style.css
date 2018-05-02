@@ -1,132 +1,244 @@
-html, body, h1, form, fieldset, legend, ol, li {
+html, h1, form, fieldset, legend, ol, li, img {
 	margin: 0;
 	padding: 0;
 }
 body {
 	font-size: 20px;
 	color: #555555;
-	background-color: #f5f5f5;
+	background-color: #f9f9f9;
 	font-family: 'Open Sans', sans-serif;
 	margin: auto auto auto 0;
 	padding: 25px;
-	max-width: 960px;
+	max-width: 1024px;
+}
+#wrapper {
+	text-align: center;
+	background-color: #636e72;
+}
+#body_content {
+	text-align: center;
+	background-color: #fff;
+	padding-top: 50px;
+	padding-bottom: 70px;
+}
+img {
+	position: relative;
+	margin-top: 10px;
 }
 
-h1 {
+/* Headings and paragraph styles */
+h1, h2, h3, h4, h5 {
 	font-family: 'Montserrat', sans-serif;
 	text-align: center;
-	text-transform: uppercase;
+}
+h1 {
 	color: #ffffff;
-	background-color: #f2784b;
-	padding: 15px 0;
+	background-color: #ff6347;
+	padding: 45px 0;
 }
-.footer {
-	background-color: #0984e3;
-	height: 200px;
-}
-
-h2 { 
-	font-family: 'Montserrat', sans-serif;
+h2, h3 {
 	color: #ff6347;
-	padding: 5px 0;
+	padding: 10px 0;
+	margin: auto;
+	line-height: 1.2em;
+}
+p {
+	color: #555555;
+	font-size: 1em;
+	margin: 0;
+	padding: 20px 0;
+}
+p.white {
+	color: white;
+	padding: 80px;
+}
+strong {
+	font-size: 1.1em;
+	color: #444444;
 }
 
-h3 {
-	color: white;
-	padding: 10px 0;
-	margin: 10px 0;
-}
+/* Log-in form - sign-on page*/
 form#login {
-	background: #9cbc2c;
+	background: #fff;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 	padding: 20px;
 	width: 400px;
 }
-hr {
-	max-width: 150px;
-	margin: 50px auto;
-	border: 2px solid;
-	opacity: 0.5;
+form#login fieldset {
+	border: none;
+	margin-bottom: 10px;
 }
-
-table {
-	border-collapse: collapse;
-	margin: 0 10px;
-	width: 100%;
+form#login fieldset:last-of-type {
+	margin-bottom: 0;
 }
-
-table, tr, th, td {
-	text-align: center;
-	height: 50px;
-	font-size: 15px;
-	color: #0984e3;
+form#login legend {
+	color: #555555;
+	font-size: 1.25em;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+form#login fieldset fieldset legend {
+	color: #111111;
+	font-size: 1.25em;
+	font-weight: normal;
+	padding-bottom: 0;
+}
+form#login ol li {
+	background: #b9cf6a;
+	background: rgba(255,255,255,.3);
+	border-color: #e3ebc3;
+	border-color: rgba(255,255,255,.6);
+	border-style: solid;
+	border-width: 2px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	line-height: 30px;
+	list-style: none;
+	padding: 5px 10px;
+	margin-bottom: 2px;
+}
+form#login ol ol li {
+	background: none;
+	border: none;
+	float: left;
+}
+form#login label {
+	float: left;
+	font-size: 0.9em;
+	width: 110px;
+}
+form#login fieldset fieldset label {
+	background:none no-repeat left 50%;
+	line-height: 30px;
+	padding: 0 0 0 30px;
+	width: auto;
+}
+form#login fieldset fieldset label:hover {
+	cursor: pointer;
+}
+form#login .login_button {
+	background: #0984e3;
+	border: none;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-khtml-border-radius: 20px;
+	border-radius: 20px;
+	color: #ffffff;
+	display: block;
+	letter-spacing: 1px;
+	margin: auto;
+	padding: 7px 25px;
+	text-shadow: 0 1px 1px #000000;
 	text-transform: uppercase;
-	padding: 5px;
-	border: 2px solid #000000;
+}
+form#login .login_button:hover {
+	background: #555555;
+	cursor: pointer;
+}
+.error {
+	color: red;
+	font-weight: bold;
+}
+.message {
+	color: blue;
+	font-weight: bold;
 }
 
-table.table_header {
+/* Navigation links styles */
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #777777;
+}
+li {
+	float: left;
+	border-right: 1px solid #bbb;
+}
+li:last-child {
+	border-right: none;
+}
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+.active {
 	color: white;
 	background-color: #0984e3;
 }
 
-table.listall, table.listall th, 
-table.listall td {
-	text-align: center;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 15px;
-	color: #0984e3;
-	text-transform: uppercase;
-	padding: 5px;
-	border: 2px solid #000000;
-}
-
-p {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 1.5em;
-}
-
-a:visited {
-	color: #555555;
-}
-
-a:active {
+/* Change the link color to #111 (black) on hover */
+li a:hover {
 	background-color: #0984e3;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #f3f3f3;
+/* Table styles */
+table {
+	border-collapse: collapse;
+	margin: 0;
+	width: 100%;
+}
+table, tr, td {
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	font-size: .9em;
+	color: #777777;
+	padding: 5px;
+	height: 50px;
+	border: 2px solid #0984e3;
+}
+th {
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	font-size: 0.95em;
+	color: #777777;
+	padding: 5px;
+	height: 50px;
+	border: 2px solid #0984e3;
+}
+.table_header {
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	font-size: 1.5em;
+	color: white;
+	background-color: #0984e3;
+}
+/* Log in Button styles */
+
+
+/* Log Out Button styles */
+a.button, a.button_login {
+	background-color: #777777;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: auto;
+}
+a.button:hover {
+	background-color: #333333;
+}
+a.button_login {
+	background-color: #ff6347;
 }
 
-li {
-    float: left;
-	border-right: 1px solid #bbb;
-}
-
-li:last-child {
-    border-right: none;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-	background-color: #111;
-}
-
-strong {
-	font-size: 1.1em;
-	color: #0984e3;
+/* Footer */
+.footer {
+	font-size: 0.8em;
+	text-align: center;
+	color: #fff;
+	margin-top: 0;
+	padding: 100px 0;
+	background-color: #636e72;
+	height: auto;
 }

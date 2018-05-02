@@ -10,16 +10,13 @@
 		echo "<nav>
 				<ul>
 					<li><a href='index.php'>All To-Dos</a></li>
-					<li><a href='index.php'>Priority</a></li>
-					<li><a href='index.php'>Tasks</a></li>
-					<li><a href='index.php'>Homework</a></li>
-					<li><a href='index.php'>Appointments</a></li>
-					<li style='float:right'><a class='active' href='addatodo.php'>Add a to-do</a></li>
+					<li><a href='prioritytodo.php'>Priority</a></li>
+					<li><a href='tasks.php'>Tasks</a></li>
+					<li><a href='homework.php'>Homework</a></li>
+					<li><a href='appointments.php'>Appointments</a></li>
+					<li style='float:right'><a class='active' href='addatodo.php'>Add A To-Do</a></li>
 				</ul>
 			</nav>";
-		echo "<h3>Time to get to work, <strong>".$_SESSION['fname']." ".$_SESSION['lname'];
-		echo "</strong> | You are logged in.";
-		echo " | <small><a href=\"sign_out.php\">Logout</a></small></h3>";
 	}
 
 	if (isset($_POST['submit'])) { //check if the form has been submitted
@@ -47,45 +44,47 @@
 <?php 
 	if (isset($message)) echo $message;
 ?>
-
-<form method="post" action="">
-	<fieldset>
-		<legend>Add a To-do</legend>
-		<label for="priority">Priority:</label> 
-			<select name="priority">
-				<?php
-					for ($i=1;$i<=2;$i++) {
-						echo '<option value="'.$i.'">'.$i.'</option>';
-					}
-				?>
-			</select><br>	
-		<label for="contact">Contact:</label>
-			<input type="text" name="contact" size="35"><br>	
-		<label for="sex">Sex:</label> 
-			<select name="sex">
-				<option value="F">Female</option>
-				<option value="M">Male</option>
-			</select><br>
-		<label for="species">Species:</label> 
-			<select name="species">
-				<option value="dog">Dog</option>
-				<option value="cat">Cat</option>
-			</select><br>
-		<label for="caretaker_id">To-Do Type:</label>
-			<select name="description">
-				<option value="1">Work Task</option>
-				<option value="2">Homework</option>
-				<option value="2">Appointment</option>
-			</select><br>
-		<label for="caretaker_id">Status:</label>
-			<select name="completed_status">
-				<option value="1">In progress</option>
-				<option value="2">Completed</option>
-			</select><br>
-		<input type="submit" name="submit">
-	</fieldset>
-</form>
+<div id="body_content">
+	<center><form id="login" method="post" action="">
+		<fieldset>
+			<legend>Add a To-do</legend>
+			<label for="priority">Priority:</label> 
+				<select name="priority">
+					<?php
+						for ($i=1;$i<=2;$i++) {
+							echo '<option value="'.$i.'">'.$i.'</option>';
+						}
+					?>
+				</select><br>	
+			<label for="contact">Contact:</label>
+				<input type="text" name="contact" size="35"><br>	
+			<label for="sex">Sex:</label> 
+	<!-- 			<select name="sex">
+					<option value="F">Female</option>
+					<option value="M">Male</option>
+				</select><br>
+			<label for="species">Species:</label> 
+				<select name="species">
+					<option value="dog">Dog</option>
+					<option value="cat">Cat</option>
+				</select><br> -->
+			<label for="caretaker_id">To-Do Type:</label>
+				<select name="description">
+					<option value="1">Work Task</option>
+					<option value="2">Homework</option>
+					<option value="2">Appointment</option>
+				</select><br>
+			<label for="caretaker_id">Status:</label>
+				<select name="completed_status">
+					<option value="1">In progress</option>
+					<option value="2">Completed</option>
+				</select><br>
+			<input type="submit" name="submit">
+		</fieldset>
+	</form></center>
+</div>
 
 <?php
+	include_once "includes/content_bottom.php";
 	include_once "includes/footer.php";
 ?>

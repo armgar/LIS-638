@@ -12,12 +12,10 @@
 					<li><a href='index.php'>Tasks</a></li>
 					<li><a href='index.php'>Homework</a></li>
 					<li><a href='index.php'>Appointments</a></li>
-					<li style='float:right'><a class='active' href='addatodo.php'>Add a to-do</a></li>
+					<li style='float:right'><a class='active' href='addatodo.php'>Add A To-Do</a></li>
 				</ul>
 			</nav>";
-		echo "<h3>Time to get to work, <strong>".$_SESSION['fname']." ".$_SESSION['lname'];
-		echo "</strong> | You are logged in.";
-		echo " | <small><a href=\"sign_out.php\">Logout</a></small></h3>";
+		include_once "includes/content_top.php";
 	}
 
 	if (isset($_POST['submit'])) { //check if the form has been submitted
@@ -62,4 +60,7 @@
 	</form>
 </fieldset>
 
-<?php include_once 'includes/footer.php'; ?>
+<?php 
+	include_once "includes/content_bottom.php";
+	include_once 'includes/footer.php';
+?>
